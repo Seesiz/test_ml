@@ -24,11 +24,7 @@ st.markdown("Cette application permet de prédire le loyer mensuel d'un logement
 @st.cache_resource
 def load_model():
     try:
-        import os
-        # Utiliser le chemin absolu pour le fichier modèle
-        model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'modele_loyer_optimise.joblib')
-        st.write(f"Tentative de chargement du modèle depuis: {model_path}")
-        return joblib.load(model_path)
+        return joblib.load('modele_loyer_optimise.joblib')
     except Exception as e:
         st.error(f"Le modèle n'a pas été trouvé ou problème de compatibilité. Erreur: {str(e)}")
         st.info("Si l'erreur est liée à la compatibilité des versions de scikit-learn, vous devrez réentraîner le modèle avec votre version actuelle.")
