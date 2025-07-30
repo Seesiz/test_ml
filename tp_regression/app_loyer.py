@@ -36,7 +36,7 @@ model = load_model()
 @st.cache_data
 def load_data():
     try:
-        return pd.read_csv('data_mock/logement.csv')
+        return pd.read_csv('logement.csv')
     except:
         st.error("Le fichier de données n'a pas été trouvé.")
         return None
