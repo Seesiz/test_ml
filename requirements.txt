@@ -1,7 +1,0 @@
-streamlit
-joblib
-scikit-learn==1.6.1
-pandas
-numpy
-folium
-streamlit_folium
