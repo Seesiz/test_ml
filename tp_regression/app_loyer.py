@@ -24,7 +24,7 @@ st.markdown("Cette application permet de prédire le loyer mensuel d'un logement
 @st.cache_resource
 def load_model():
     try:
-        return joblib.load('modele_loyer_optimise.joblib')
+        return joblib.load('./modele_loyer_optimise.joblib')
     except Exception as e:
         st.error(f"Le modèle n'a pas été trouvé ou problème de compatibilité. Erreur: {str(e)}")
         st.info("Si l'erreur est liée à la compatibilité des versions de scikit-learn, vous devrez réentraîner le modèle avec votre version actuelle.")
